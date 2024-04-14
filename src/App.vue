@@ -1,12 +1,11 @@
 <script>
-import axios from 'axios';
 import ProjectsList from './components/ProjectsList.vue'
 
 export default {
   data() {
     return {
       title: 'Boolfolio',
-      projects: [],
+
     };
   },
 
@@ -14,11 +13,7 @@ export default {
     ProjectsList,
   },
 
-  created() {
-    axios.get('http://127.0.0.1:8000/api/projects').then((response) => {
-      this.projects = response.data.data;
-    })
-  }
+
 }
 </script>
 
@@ -27,7 +22,7 @@ export default {
 
   <div class="container">
     <div class="row g-3">
-      <projects-list :projects="projects"></projects-list>
+      <projects-list></projects-list>
     </div>
   </div>
 
