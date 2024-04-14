@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import ProjectCard from './components/ProjectCard.vue'
+import ProjectsList from './components/ProjectsList.vue'
 
 export default {
   data() {
@@ -11,7 +11,7 @@ export default {
   },
 
   components: {
-    ProjectCard,
+    ProjectsList,
   },
 
   created() {
@@ -24,7 +24,13 @@ export default {
 
 <template>
   <h1 class="text-center">{{ title }}</h1>
-  <project-card :projects="projects"></project-card>
+
+  <div class="container">
+    <div class="row g-3">
+      <projects-list :projects="projects"></projects-list>
+    </div>
+  </div>
+
 </template>
 
 <style lang="scss">
