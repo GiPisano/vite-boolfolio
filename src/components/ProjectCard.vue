@@ -14,8 +14,7 @@ export default {
 </script>
 
 <template>
-
-    <div class="col-3">
+    <div class="col-4">
         <div class="card h-100">
             <img :src="project.image ? project.image : 'https://picsum.photos/200/150'" class="card-img-top" alt="...">
             <div class="card-body">
@@ -31,7 +30,6 @@ export default {
                     }}</span>
             </div>
         </div>
-
     </div>
 </template>
 

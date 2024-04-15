@@ -1,16 +1,18 @@
 <script>
 import ProjectsList from './components/ProjectsList.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   data() {
     return {
-      title: 'Boolfolio',
-
     };
   },
 
   components: {
     ProjectsList,
+    AppHeader,
+    AppFooter,
   },
 
 
@@ -18,14 +20,13 @@ export default {
 </script>
 
 <template>
-  <h1 class="text-center">{{ title }}</h1>
+  <app-header></app-header>
 
   <div class="container">
-    <div class="row g-3">
-      <projects-list></projects-list>
-    </div>
+    <projects-list></projects-list>
   </div>
 
+  <app-footer></app-footer>
 </template>
 
 <style lang="scss">
