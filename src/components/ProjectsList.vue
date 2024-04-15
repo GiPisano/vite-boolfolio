@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import { api, store } from '../store';
 import ProjectCard from './ProjectCard.vue'
 import UiPagination from './ui/UiPagination.vue'
 
@@ -7,9 +8,8 @@ import UiPagination from './ui/UiPagination.vue'
 export default {
     data() {
         return {
-            projects: [],
-            baseUrl: 'http://127.0.0.1:8000/api/projects',
-            pagination: [],
+            pagination: store.pagination,
+            projects: store.projects,
         }
     },
 
@@ -19,7 +19,7 @@ export default {
     },
 
     methods: {
-        fetchProjects(endpoint = this.baseUrl) {
+        fetchProjects(endpoint = api.baseUrl + '/projects') {
             axios.get(endpoint).then((response) => {
                 this.projects = response.data.data;
                 this.pagination = response.data.links;

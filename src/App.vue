@@ -31,4 +31,14 @@ export default {
 
 <style lang="scss">
 @use './styles/general.scss';
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .main {
+    flex-grow: 1;
+  }
+}
 </style>

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import BlogPage from "./pages/BlogPage.vue";
 import HomePage from "./pages/HomePage.vue";
+import PageDetails from "./pages/PageDetails.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,8 +14,13 @@ const router = createRouter({
     },
     {
       path: "/blog",
-      name: "blog",
+      name: "projects.index",
       component: BlogPage,
+    },
+    {
+      path: "/project/:id",
+      name: "projects.show",
+      component: PageDetails,
     },
   ],
 });

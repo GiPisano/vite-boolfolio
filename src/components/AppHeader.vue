@@ -22,7 +22,7 @@ export default {
                         <router-link :to="{ name: 'home' }" class="nav-link">Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{ name: 'blog' }" class="nav-link">Blog</router-link>
+                        <router-link :to="{ name: 'projects.index' }" class="nav-link">Blog</router-link>
                     </li>
 
                 </ul>

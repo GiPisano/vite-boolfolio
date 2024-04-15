@@ -11,4 +11,10 @@
 
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.footer {
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+}
+</style>
