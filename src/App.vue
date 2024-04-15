@@ -1,5 +1,4 @@
 <script>
-import ProjectsList from './components/ProjectsList.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 
@@ -10,7 +9,6 @@ export default {
   },
 
   components: {
-    ProjectsList,
     AppHeader,
     AppFooter,
   },
@@ -20,13 +18,15 @@ export default {
 </script>
 
 <template>
-  <app-header></app-header>
+  <div class="wrapper">
+    <app-header></app-header>
 
-  <div class="container">
-    <projects-list></projects-list>
+    <div class="container main">
+      <router-view></router-view>
+    </div>
+
+    <app-footer></app-footer>
   </div>
-
-  <app-footer></app-footer>
 </template>
 
 <style lang="scss">
